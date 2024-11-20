@@ -39,7 +39,8 @@ local Tab1 = Window:CreateTab("Main", 4483362458) -- Title, Image
 local Button = Tab:CreateButton({
    Name = "Reset Character",
    Callback = function()
-   game.Players.LocalPlayer.Character.Head:Remove()-- The function that takes place when the button is pressed
+   game.Players.LocalPlayer.Character.Head:Remove()
+-- The function that takes place when the button is pressed
    end,
 })
 
