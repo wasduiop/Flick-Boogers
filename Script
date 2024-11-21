@@ -45,8 +45,8 @@ local Button = Tab1:CreateButton({
 
 local Dropdown = Tab1:CreateDropdown({
    Name = "Respawn in map",
-   Options = {"House","Hospital","None"},
-   CurrentOption = {"None"},
+   Options = {"House", "Hospital", "Off"},
+   CurrentOption = {"Off"},
    MultipleOptions = false,
    Flag = "RespawnInMap", -- A flag is the identifier for the configuration file, make lement has a different flag if you're using configuration saving to ensure no overlaps
    Callback = function(Options)
@@ -56,9 +56,6 @@ local Dropdown = Tab1:CreateDropdown({
          wait(6)
          game.Players.LocalPlayer.PlayerGui.Cutscenes.MidPanel:Destroy()
          game.Lighting:GetChildren():Destroy()
-         if (game.Players.LocalPlayer.Character) then
-            game.Workspace.Camera.CameraType = Enum.CameraType.Custom
-         end
          -- -89, 5, 17
          print("Reset to house success")
       end
@@ -67,7 +64,7 @@ local Dropdown = Tab1:CreateDropdown({
          print("Reseting to Hospital")
       end
 
-      if (Options[1] == "None") then
+      if (Options[1] == "Off") then
          print("Default")
       else
          print("noinputError")
