@@ -47,7 +47,7 @@ local Button = Tab1:CreateButton({
 local Dropdown = Tab1:CreateDropdown({
    Name = "Respawn in map: ",
    Options = {"House","Hospital"},
-   CurrentOption = {"Option 1"},
+   CurrentOption = {"Hospital"},
    MultipleOptions = false,
    Flag = "Dropdown1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
    Callback = function(Options)
@@ -59,3 +59,6 @@ local Dropdown = Tab1:CreateDropdown({
       end
    end,
 })
+
+
+Rayfield:LoadConfiguration()
