@@ -34,13 +34,12 @@ local Window = Rayfield:CreateWindow({
    }
 })
 
-local Tab1 = Window:CreateTab("Tab Example", 4483362458) -- Title, Imag
+local Tab1 = Window:CreateTab("Main", "house") -- Title, Imag
 
 local Button = Tab1:CreateButton({
-   Name = "Button Example",
+   Name = "Reset Character",
    Callback = function()
       game.Players.LocalPlayer.Character.Head:Remove()
-   -- The function that takes place when the button is pressed
    end,
 })
 
@@ -53,6 +52,10 @@ local Dropdown = Tab1:CreateDropdown({
    Callback = function(Options)
       if (Options[1] == "House") then
          print("Reseting to house.")
+         wait(5)
+         game.Players.LocalPlayer.PlayerGui.Cutscenes.MidPanel.LoadingLabel:Destroy()
+         game.Players.LocalPlayer.PlayerGui.Cutscenes.MidPanel.MapVoting:Destroy()
+         game.Lighting.Blur:Destroy()
       elseif (Options[1] == "Hospital") then
          print("Reseting to Hospital")
       elseif (Options[1] == "None") then
@@ -63,4 +66,25 @@ local Dropdown = Tab1:CreateDropdown({
    end,
 })
 
+
+local Tab2 = Window:CreateTab("Visual", "eye") -- Title, Image
+
+local Toggle = Tab2:CreateToggle({
+   Name = "Fullbright",
+   CurrentValue = false,
+   Flag = "Fullbright", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+   -- The function that takes place when the toggle is pressed
+   -- The variable (Value) is a boolean on whether the toggle is true or false
+      if value then
+         game:GetService("Lighting").Brightness = 2
+         game:GetService("Lighting").ClockTime = 14
+         game:GetService("Lighting").FogEnd = 100000
+         game:GetService("Lighting").GlobalShadows = false
+         game:GetService("Lighting").OutdoorAmbient = Color3.fromRGB(128, 128, 128)
+         print("Fullbright On")
+      else
+         print("Fullbright Off")
+   end,
+})
 
