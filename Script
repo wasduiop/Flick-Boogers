@@ -1,24 +1,24 @@
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 local Window = Rayfield:CreateWindow({
-   Name = "Rayfield Example Window",
-   Icon = 0, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
-   LoadingTitle = "Rayfield Interface Suite",
-   LoadingSubtitle = "by Sirius",
-   Theme = "Default", -- Check https://docs.sirius.menu/rayfield/configuration/themes
+   Name = "Flick Boogers | Hub",
+   Icon = "align-left", -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
+   LoadingTitle = "Flick Boogers | Hub",
+   LoadingSubtitle = "By wasduiop",
+   Theme = "DarkBlue", -- Check https://docs.sirius.f44tthjgcgu7fgmenu/rayfield/configuration/themes
 
    DisableRayfieldPrompts = false,
    DisableBuildWarnings = false, -- Prevents Rayfield from warning when the script has a version mismatch with the interface
 
    ConfigurationSaving = {
-      Enabled = false,
-      FolderName = nil, -- Create a custom folder for your hub/game
-      FileName = "Big Hub"
+      Enabled = true,
+      FolderName = FlickBoogersHub, -- Create a custom folder for your hub/game
+      FileName = "FlickBoogersConfigs"
    },
 
    Discord = {
-      Enabled = false, -- Prompt the user to join your Discord server if their executor supports it
-      Invite = "noinvitelink", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD
+      Enabled = true, -- Prompt the user to join your Discord server if their executor supports it
+      Invite = "arWjGHMg9Q", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD
       RememberJoins = true -- Set this to false to make them join the discord every time they load it up
    },
 
@@ -34,12 +34,28 @@ local Window = Rayfield:CreateWindow({
    }
 })
 
-local Tab = Window:CreateTab("Tab Example", 4483362458) -- Title, Image
+local Tab1 = Window:CreateTab("Tab Example", 4483362458) -- Title, Imag
 
-local Button = Tab:CreateButton({
+local Button = Tab1:CreateButton({
    Name = "Button Example",
    Callback = function()
+      game.Players.LocalPlayer.Character.Head:Remove()
    -- The function that takes place when the button is pressed
    end,
 })
 
+local Dropdown = Tab1:CreateDropdown({
+   Name = "Respawn in map: ",
+   Options = {"House","Hospital"},
+   CurrentOption = {"Option 1"},
+   MultipleOptions = false,
+   Flag = "Dropdown1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Options)
+   -- The function that takes place when the selected option is changed
+   -- The variable (Options) is a table of strings for the current selected options
+      if (Options == "House")
+      {
+         game.Players.LocalPlayer.Character.Head:Remove()
+      }
+   end,
+})
