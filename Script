@@ -63,7 +63,7 @@ local Dropdown = Tab1:CreateDropdown({
          -- -89, 5, 17
          game.Players.LocalPlayer.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
          wait(0.1)
-         game.Players.LocalPlayer.Character.HumanoidRootPart = CFrame.new(-89, 5, 17)
+         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-89, 5, 17)
          print("Reset to house success")
       end
 
@@ -79,7 +79,7 @@ local Dropdown = Tab1:CreateDropdown({
          game.Workspace.Camera.CameraSubject = game.Players.LocalPlayer.Character.HumanoidRootPart
          game.Players.LocalPlayer.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
          wait(0.1)
-         game.Players.LocalPlayer.Character.HumanoidRootPart = CFrame.new(424, 16, 20)
+         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(424, 16, 20)
          print("Reset to hospital success")
       end
 
