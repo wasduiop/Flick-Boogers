@@ -56,6 +56,7 @@ local Dropdown = Tab1:CreateDropdown({
          local playerShirt = game.Players.LocalPlayer.Character.Shirt
          local playerPants = game.Players.LocalPlayer.Character.Pants.PantsTemplate
          -- local playerHair = game.Players.LocalPlayer.Character
+-- https://devforum.roblox.com/t/how-do-i-save-a-color3-value/1132835/3
          local playerSkin = {humanDesc.HeadColor.R, humanDesc.HeadColor.G, humanDesc.HeadColor.B}
          local playerFace = game.Players.LocalPlayer.Character.Head.face.Texture
          game.Players.LocalPlayer.Character.Head:Remove()
@@ -66,11 +67,11 @@ local Dropdown = Tab1:CreateDropdown({
          wait(0.1)
          game.Workspace.Camera.CameraType = Enum.CameraType.Custom
          game.Workspace.Camera.CameraSubject = game.Players.LocalPlayer.Character.HumanoidRootPart
-         -- -89, 5, 17
          game.Players.LocalPlayer.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
          wait(0.1)
          game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-89, 5, 17)
          wait(0.2)
+-- https://www.reddit.com/r/robloxgamedev/comments/1fgjfhs/is_there_a_way_to_add_a_pantsshirt_onto_a_rig/?rdt=34316
          game.Players.LocalPlayer.Character.Instance.new("Shirt").ShirtTemplate = playerShirt
          game.Players.LocalPlayer.Character.Pants.PantsTemplate = playerPants
          game.Players.LocalPlayer.Character.Humanoid.HumanoidDescription.HeadColor = Color3.new(playerSkin[1], playerSkin[2], playerSkin[3])
