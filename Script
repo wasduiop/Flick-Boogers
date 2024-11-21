@@ -11,7 +11,7 @@ local Window = Rayfield:CreateWindow({
    DisableBuildWarnings = false, -- Prevents Rayfield from warning when the script has a version mismatch with the interface
 
    ConfigurationSaving = {
-      Enabled = true,
+      Enabled = false,
       FolderName = FlickBoogersHub, -- Create a custom folder for your hub/game
       FileName = "FlickBoogersConfigs"
    },
@@ -46,14 +46,14 @@ local Button = Tab1:CreateButton({
 
 local Dropdown = Tab1:CreateDropdown({
    Name = "Respawn in map: ",
-   Options = {"House","Hospital"},
-   CurrentOption = {"Hospital"},
+   Options = {"House","Hospital","None"},
+   CurrentOption = {"None"},
    MultipleOptions = false,
    Flag = "Dropdown1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
    Callback = function(Options)
    -- The function that takes place when the selected option is changed
    -- The variable (Options) is a table of strings for the current selected options
-      if Options == "House" then
+      if (Options == {"House"}) then
          print ("a")
          game.Players.LocalPlayer.Character.Head:Remove()
       end
@@ -61,4 +61,3 @@ local Dropdown = Tab1:CreateDropdown({
 })
 
 
-Rayfield:LoadConfiguration()
