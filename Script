@@ -45,7 +45,7 @@ local Button = Tab1:CreateButton({
 })
 
 local Dropdown = Tab1:CreateDropdown({
-   Name = "Respawn in map: ",
+   Name = "Respawn in map",
    Options = {"House","Hospital","None"},
    CurrentOption = {"None"},
    MultipleOptions = false,
@@ -53,8 +53,12 @@ local Dropdown = Tab1:CreateDropdown({
    Callback = function(Options)
       if (Options == "House") then
          print("a")
+      elseif (Options == "Hospital") then
+         print("caca")
+      elseif (Options == "None") then
+         print("none")
       else
-         print("b")
+         print("noinput")
       end
    end,
 })
