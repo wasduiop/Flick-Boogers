@@ -34,7 +34,7 @@ local Window = Rayfield:CreateWindow({
    }
 })
 
-local Tab1 = Window:CreateTab("Main", "eye") -- Title, Imag
+local Tab1 = Window:CreateTab("Main", "plus") -- Title, Imag
 
 local Button = Tab1:CreateButton({
    Name = "Reset Character",
@@ -48,17 +48,23 @@ local Dropdown = Tab1:CreateDropdown({
    Options = {"House","Hospital","None"},
    CurrentOption = {"None"},
    MultipleOptions = false,
-   Flag = "Dropdown1", -- A flag is the identifier for the configuration file, make lement has a different flag if you're using configuration saving to ensure no overlaps
+   Flag = "RespawnInMap", -- A flag is the identifier for the configuration file, make lement has a different flag if you're using configuration saving to ensure no overlaps
    Callback = function(Options)
       if (Options[1] == "House") then
          print("Reseting to house.")
+         game.Players.LocalPlayer.Character.Head:Remove()
          wait(5)
          game.Players.LocalPlayer.PlayerGui.Cutscenes.MidPanel.LoadingLabel:Destroy()
          game.Players.LocalPlayer.PlayerGui.Cutscenes.MidPanel.MapVoting:Destroy()
          game.Lighting.Blur:Destroy()
-      elseif (Options[1] == "Hospital") then
+         print("Reset to house success")
+      end
+
+      if (Options[1] == "Hospital") then
          print("Reseting to Hospital")
-      elseif (Options[1] == "None") then
+      end
+
+      if (Options[1] == "None") then
          print("Default")
       else
          print("noinputError")
@@ -71,7 +77,7 @@ local Tab2 = Window:CreateTab("Visual", "eye") -- Title, Image
 local Toggle = Tab2:CreateToggle({
    Name = "Fullbright",
    CurrentValue = false,
-   Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Flag = "Fullbright", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
    Callback = function(Value)
       if (Value) then
          game:GetService("Lighting").Brightness = 2
