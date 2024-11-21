@@ -36,10 +36,10 @@ local Window = Rayfield:CreateWindow({
 
 local Tab1 = Window:CreateTab("Main", 4483362458) -- Title, Image
 
-local Button = Tab:CreateButton({
+local Button = Tab1:CreateButton({
    Name = "Reset Character",
    Callback = function()
-      print("Hi") -- The function that takes place when the button is pressed
+      print("Hi")
    end,
 })
 
