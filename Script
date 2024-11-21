@@ -40,6 +40,5 @@ local Button = Tab1:CreateButton({
    Name = "Reset Character",
    Callback = function()
    end,
-   print("hi")
 })
 
