@@ -53,7 +53,7 @@ local Dropdown = Tab1:CreateDropdown({
    Callback = function(Options)
    -- The function that takes place when the selected option is changed
    -- The variable (Options) is a table of strings for the current selected options
-      if (Options == {"House"}) then
+      if (Options == "House") then
          print ("a")
          game.Players.LocalPlayer.Character.Head:Remove()
       end
