@@ -51,14 +51,14 @@ local Dropdown = Tab1:CreateDropdown({
    MultipleOptions = false,
    Flag = "Dropdown1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
    Callback = function(Options)
-      if (Options[0]) then
-         print("1")
-      elseif (Options[1]) then
-         print("2")
-      elseif (Options[2]) then
-         print("3")
+      if (Options[1] == "House") then
+         print("Reseting to house.")
+      elseif (Options[1] == "Hospital") then
+         print("Reseting to Hospital")
+      elseif (Options[1] == "None") then
+         print("Default")
       else
-         print("noinput")
+         print("noinputError")
       end
    end,
 })
