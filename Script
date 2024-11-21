@@ -53,7 +53,7 @@ local Dropdown = Tab1:CreateDropdown({
       if (Options[1] == "House") then
          print("Reseting to house.")
          local humanDesc = game.Players.LocalPlayer.Character.Humanoid.HumanoidDescription
-         local playerShirt = game.Players.LocalPlayer.Character.Shirt.ShirtTemplate
+         local playerShirt = game.Players.LocalPlayer.Character.Shirt
          local playerPants = game.Players.LocalPlayer.Character.Pants.PantsTemplate
          -- local playerHair = game.Players.LocalPlayer.Character
          local playerSkin = {humanDesc.HeadColor.R, humanDesc.HeadColor.G, humanDesc.HeadColor.B}
@@ -70,7 +70,8 @@ local Dropdown = Tab1:CreateDropdown({
          game.Players.LocalPlayer.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
          wait(0.1)
          game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-89, 5, 17)
-         game.Players.LocalPlayer.Character.Shirt.ShirtTemplate = playerShirt
+         wait(0.2)
+         game.Players.LocalPlayer.Character.Instance.new("Shirt").ShirtTemplate = playerShirt
          game.Players.LocalPlayer.Character.Pants.PantsTemplate = playerPants
          game.Players.LocalPlayer.Character.Humanoid.HumanoidDescription.HeadColor = Color3.new(playerSkin[1], playerSkin[2], playerSkin[3])
          game.Players.LocalPlayer.Character.Head.face.Texture = playerFace
