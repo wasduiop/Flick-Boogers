@@ -45,7 +45,7 @@ local Button = Tab1:CreateButton({
 
 local Dropdown = Tab1:CreateDropdown({
    Name = "Respawn in map",
-   Options = {"House", "Hospital", "Off"},
+   Options = {"Off", "Area 8", "Farmstead", "Hospital", "House", "Sewers", "Woods"},
    CurrentOption = {"Off"},
    MultipleOptions = false,
    Flag = "RespawnInMap", -- A flag is the identifier for the configuration file, make lement has a different flag if you're using configuration saving to ensure no overlaps
