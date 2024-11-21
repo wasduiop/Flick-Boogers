@@ -55,7 +55,7 @@ local Dropdown = Tab1:CreateDropdown({
          game.Players.LocalPlayer.Character.Head:Remove()
          wait(5)
          game.Players.LocalPlayer.PlayerGui.Cutscenes.MidPanel:Destroy()
-         game:GetService("Lighting").Blur:Destroy()
+         game.Lighting:GetChildren():Destroy()
          -- -89, 5, 17
          print("Reset to house success")
       end
