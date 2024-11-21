@@ -48,7 +48,7 @@ local Dropdown = Tab1:CreateDropdown({
    Options = {"House","Hospital","None"},
    CurrentOption = {"None"},
    MultipleOptions = false,
-   Flag = "Dropdown1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Flag = "RespawnInMap", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
    Callback = function(Options)
       if (Options[1] == "House") then
          print("Reseting to house.")
@@ -76,7 +76,7 @@ local Toggle = Tab2:CreateToggle({
    Callback = function(Value)
    -- The function that takes place when the toggle is pressed
    -- The variable (Value) is a boolean on whether the toggle is true or false
-      if value then
+      if (Value) then
          game:GetService("Lighting").Brightness = 2
          game:GetService("Lighting").ClockTime = 14
          game:GetService("Lighting").GlobalShadows = false
