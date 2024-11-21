@@ -55,7 +55,7 @@ local Dropdown = Tab1:CreateDropdown({
          game.Players.LocalPlayer.Character.Head:Remove()
          wait(6)
          game.Players.LocalPlayer.PlayerGui.Cutscenes.MidPanel:Destroy()
-         game:GetService("Lighting"):GetChildren():Destroy()
+         game.Lighting:GetChildren():Destroy()
          if (game.Players.LocalPlayer.Character) then
             game.Workspace.Camera.CameraType = Enum.CameraType.Custom
             break
