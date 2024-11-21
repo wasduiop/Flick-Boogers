@@ -56,6 +56,10 @@ local Dropdown = Tab1:CreateDropdown({
          wait(6)
          game.Players.LocalPlayer.PlayerGui.Cutscenes.MidPanel:Destroy()
          game.Lighting.Blur:Destroy()
+         game.Workspace.Camera:Remove()
+         wait(0.1)
+         game.Workspace.Camera.CameraType = Enum.CameraType.Custom
+         game.Workspace.Camera.CameraSubject = game.Players.LocalPlayer.Character.HumanoidRootPart
          -- -89, 5, 17
          print("Reset to house success")
       end
