@@ -36,6 +36,8 @@ local Window = Rayfield:CreateWindow({
 
 local Tab1 = Window:CreateTab("Main", "house") -- Title, Imag
 
+local Section = Tab1:CreateSection("Section Example")
+
 local Button = Tab1:CreateButton({
    Name = "Reset Character",
    Callback = function()
@@ -65,7 +67,6 @@ local Dropdown = Tab1:CreateDropdown({
       end
    end,
 })
-
 
 local Tab2 = Window:CreateTab("Visual", "eye") -- Title, Image
 
