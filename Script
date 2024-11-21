@@ -34,9 +34,7 @@ local Window = Rayfield:CreateWindow({
    }
 })
 
-local Tab1 = Window:CreateTab("Main", "house") -- Title, Imag
-
-local Section = Tab1:CreateSection("Section Example")
+local Tab1 = Window:CreateTab("Main", "eye") -- Title, Imag
 
 local Button = Tab1:CreateButton({
    Name = "Reset Character",
