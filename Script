@@ -79,12 +79,15 @@ local Toggle = Tab2:CreateToggle({
       if value then
          game:GetService("Lighting").Brightness = 2
          game:GetService("Lighting").ClockTime = 14
-         game:GetService("Lighting").FogEnd = 100000
          game:GetService("Lighting").GlobalShadows = false
          game:GetService("Lighting").OutdoorAmbient = Color3.fromRGB(128, 128, 128)
          print("Fullbright On")
       else
+         game:GetService("Lighting").Brightness = 0
+         game:GetService("Lighting").ClockTime = 0
+         game:GetService("Lighting").OutdoorAmbient = Color3.fromRGB(0, 0, 0)
          print("Fullbright Off")
+      end
    end,
 })
 
