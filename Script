@@ -52,13 +52,13 @@ local Dropdown = Tab1:CreateDropdown({
    Callback = function(Options)
       if (Options[1] == "House") then
          print("Reseting to house.")
-         local humanDesc = game.Players.LocalPlayer.Character.Humanoid.HumanoidDescription
-         local playerShirt = game.Players.LocalPlayer.Character.Shirt
-         local playerPants = game.Players.LocalPlayer.Character.Pants.PantsTemplate
+--         local humanDesc = game.Players.LocalPlayer.Character.Humanoid.HumanoidDescription
+  --       local playerShirt = game.Players.LocalPlayer.Character.Shirt
+    --     local playerPants = game.Players.LocalPlayer.Character.Pants.PantsTemplate
          -- local playerHair = game.Players.LocalPlayer.Character
 -- https://devforum.roblox.com/t/how-do-i-save-a-color3-value/1132835/3
-         local playerSkin = {humanDesc.HeadColor.R, humanDesc.HeadColor.G, humanDesc.HeadColor.B}
-         local playerFace = game.Players.LocalPlayer.Character.Head.face.Texture
+      --   local playerSkin = {humanDesc.HeadColor.R, humanDesc.HeadColor.G, humanDesc.HeadColor.B}
+        -- local playerFace = game.Players.LocalPlayer.Character.Head.face.Texture
          game.Players.LocalPlayer.Character.Head:Remove()
          wait(6)
          game.Players.LocalPlayer.PlayerGui.Cutscenes.MidPanel:Destroy()
@@ -72,15 +72,15 @@ local Dropdown = Tab1:CreateDropdown({
          game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-89, 5, 17)
          wait(0.2)
 -- https://www.reddit.com/r/robloxgamedev/comments/1fgjfhs/is_there_a_way_to_add_a_pantsshirt_onto_a_rig/?rdt=34316
-         game.Players.LocalPlayer.Character.Instance.new("Shirt").ShirtTemplate = playerShirt
-         game.Players.LocalPlayer.Character.Pants.PantsTemplate = playerPants
-         game.Players.LocalPlayer.Character.Humanoid.HumanoidDescription.HeadColor = Color3.new(playerSkin[1], playerSkin[2], playerSkin[3])
-         game.Players.LocalPlayer.Character.Head.face.Texture = playerFace
+--         game.Players.LocalPlayer.Character.Instance.new("Shirt").ShirtTemplate = playerShirt
+  --       game.Players.LocalPlayer.Character.Pants.PantsTemplate = playerPants
+    --     game.Players.LocalPlayer.Character.Humanoid.HumanoidDescription.HeadColor = Color3.new(playerSkin[1], playerSkin[2], playerSkin[3])
+      --   game.Players.LocalPlayer.Character.Head.face.Texture = playerFace
          print("Reset to house success")
       end
 
       if (Options[1] == "Hospital") then
-         print("Reseting to Hospital")
+         print("Reseting to [Hospital]")
          game.Players.LocalPlayer.Character.Head:Remove()
          wait(6)
          game.Players.LocalPlayer.PlayerGui.Cutscenes.MidPanel:Destroy()
@@ -92,11 +92,71 @@ local Dropdown = Tab1:CreateDropdown({
          game.Players.LocalPlayer.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
          wait(0.1)
          game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(424, 16, 20)
-         print("Reset to hospital success")
+         print("Reset to [Hospital] success")
       end
 
       if (Options[1] == "Area 8") then
-         print("Resetting to Area 8") -- -443 39 -2
+         print("Resetting to [Area 8]")
+         game.Players.LocalPlayer.Character.Head:Remove()
+         wait(6)
+         game.Players.LocalPlayer.PlayerGui.Cutscenes.MidPanel:Destroy()
+         game.Lighting.Blur:Destroy()
+         game.Workspace.Camera:Remove()
+         wait(0.1)
+         game.Workspace.Camera.CameraType = Enum.CameraType.Custom
+         game.Workspace.Camera.CameraSubject = game.Players.LocalPlayer.Character.HumanoidRootPart
+         game.Players.LocalPlayer.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+         wait(0.1)
+         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-443, 39, -2)
+         print("Reset to [Area 8] success")
+      end
+
+      if (Options[1] == "Farmstead") then
+         print("Resetting to [Farmstead]")
+         game.Players.LocalPlayer.Character.Head:Remove()
+         wait(6)
+         game.Players.LocalPlayer.PlayerGui.Cutscenes.MidPanel:Destroy()
+         game.Lighting.Blur:Destroy()
+         game.Workspace.Camera:Remove()
+         wait(0.1)
+         game.Workspace.Camera.CameraType = Enum.CameraType.Custom
+         game.Workspace.Camera.CameraSubject = game.Players.LocalPlayer.Character.HumanoidRootPart
+         game.Players.LocalPlayer.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+         wait(0.1)
+         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(107, 5 38)
+         print("Reset to [Farmstead] success")
+      end
+
+      if (Options[1] == "Sewers") then
+         print("Resetting to [Sewers]")
+         game.Players.LocalPlayer.Character.Head:Remove()
+         wait(6)
+         game.Players.LocalPlayer.PlayerGui.Cutscenes.MidPanel:Destroy()
+         game.Lighting.Blur:Destroy()
+         game.Workspace.Camera:Remove()
+         wait(0.1)
+         game.Workspace.Camera.CameraType = Enum.CameraType.Custom
+         game.Workspace.Camera.CameraSubject = game.Players.LocalPlayer.Character.HumanoidRootPart
+         game.Players.LocalPlayer.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+         wait(0.1)
+         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-260,13,102)
+         print("Reset to [Sewers] success")
+      end
+
+      if (Options[1] == "Woods") then
+         print("Resetting to [Woods]")
+         game.Players.LocalPlayer.Character.Head:Remove()
+         wait(6)
+         game.Players.LocalPlayer.PlayerGui.Cutscenes.MidPanel:Destroy()
+         game.Lighting.Blur:Destroy()
+         game.Workspace.Camera:Remove()
+         wait(0.1)
+         game.Workspace.Camera.CameraType = Enum.CameraType.Custom
+         game.Workspace.Camera.CameraSubject = game.Players.LocalPlayer.Character.HumanoidRootPart
+         game.Players.LocalPlayer.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+         wait(0.1)
+         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(610,17,49)
+         print("Reset to [Woods] success")
       end
 
       if (Options[1] == "Off") then
