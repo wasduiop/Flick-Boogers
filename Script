@@ -7,7 +7,7 @@ local Window = Rayfield:CreateWindow({
    LoadingSubtitle = "By wasduiop",
    Theme = "DarkBlue", -- Check https://docs.sirius.f44tthjgcgu7fgmenu/rayfield/configuration/themes
 
-   DisableRayfieldPrompts = true,
+   DisableRayfieldPrompts = false,
    DisableBuildWarnings = false, -- Prevents Rayfield from warning when the script has a version mismatch with the interface
 
    ConfigurationSaving = {
@@ -17,7 +17,7 @@ local Window = Rayfield:CreateWindow({
    },
 
    Discord = {
-      Enabled = true, -- Prompt the user to join your Discord server if their executor supports it
+      Enabled = false, -- Prompt the user to join your Discord server if their executor supports it
       Invite = "arWjGHMg9Q", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD
       RememberJoins = true -- Set this to false to make them join the discord every time they load it up
    },
