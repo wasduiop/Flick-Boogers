@@ -1,24 +1,24 @@
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 local Window = Rayfield:CreateWindow({
-   Name = "Flick Boogers | Hub",
-   Icon = "align-left", -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
-   LoadingTitle = "Flick Boogers | Hub",
-   LoadingSubtitle = "By wasduiop",
-   Theme = "DarkBlue", -- Check https://docs.sirius.f44tthjgcgu7fgmenu/rayfield/configuration/themes
+   Name = "Rayfield Example Window",
+   Icon = 0, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
+   LoadingTitle = "Rayfield Interface Suite",
+   LoadingSubtitle = "by Sirius",
+   Theme = "Default", -- Check https://docs.sirius.menu/rayfield/configuration/themes
 
    DisableRayfieldPrompts = false,
    DisableBuildWarnings = false, -- Prevents Rayfield from warning when the script has a version mismatch with the interface
 
    ConfigurationSaving = {
-      Enabled = false,
-      FolderName = FlickBoogersHub, -- Create a custom folder for your hub/game
-      FileName = "FlickBoogersConfigs"
+      Enabled = true,
+      FolderName = nil, -- Create a custom folder for your hub/game
+      FileName = "Big Hub"
    },
 
    Discord = {
       Enabled = false, -- Prompt the user to join your Discord server if their executor supports it
-      Invite = "arWjGHMg9Q", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD
+      Invite = "noinvitelink", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD
       RememberJoins = true -- Set this to false to make them join the discord every time they load it up
    },
 
@@ -36,7 +36,7 @@ local Window = Rayfield:CreateWindow({
 
 local Tab1 = Window:CreateTab("Main", "plus") -- Title, Imag
 
-local Button = Tab1:CreateButton({
+   local Button = Tab1:CreateButton({
    Name = "Reset Character",
    Callback = function()
       game.Players.LocalPlayer.Character.Head:Remove()
@@ -44,7 +44,7 @@ local Button = Tab1:CreateButton({
 })
 
 local Dropdown = Tab1:CreateDropdown({
-   Name = "Respawn in map (7.5 seconds)",
+   Name = "Respawn in map 7.5 seconds",
    Options = {"Off", "Area 8", "Farmstead", "Hospital", "House", "Sewers", "Woods"},
    CurrentOption = {"Off"},
    MultipleOptions = false,
