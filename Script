@@ -44,7 +44,7 @@ local Button = Tab1:CreateButton({
 })
 
 local Dropdown = Tab1:CreateDropdown({
-   Name = "Respawn in map",
+   Name = "Respawn in map (7.5 seconds)",
    Options = {"Off", "Area 8", "Farmstead", "Hospital", "House", "Sewers", "Woods"},
    CurrentOption = {"Off"},
    MultipleOptions = false,
@@ -80,7 +80,7 @@ local Dropdown = Tab1:CreateDropdown({
       end
 
       if (Options[1] == "Hospital") then
-         print("Reseting to [Hospital]")
+         print("Reseting to Hospital")
          game.Players.LocalPlayer.Character.Head:Remove()
          wait(6)
          game.Players.LocalPlayer.PlayerGui.Cutscenes.MidPanel:Destroy()
@@ -92,11 +92,11 @@ local Dropdown = Tab1:CreateDropdown({
          game.Players.LocalPlayer.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
          wait(0.1)
          game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(424, 16, 20)
-         print("Reset to [Hospital] success")
+         print("Reset to Hospital success")
       end
 
       if (Options[1] == "Area 8") then
-         print("Resetting to [Area 8]")
+         print("Resetting to Area 8")
          game.Players.LocalPlayer.Character.Head:Remove()
          wait(6)
          game.Players.LocalPlayer.PlayerGui.Cutscenes.MidPanel:Destroy()
@@ -108,11 +108,11 @@ local Dropdown = Tab1:CreateDropdown({
          game.Players.LocalPlayer.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
          wait(0.1)
          game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-443, 39, -2)
-         print("Reset to [Area 8] success")
+         print("Reset to Area 8 success")
       end
 
       if (Options[1] == "Farmstead") then
-         print("Resetting to [Farmstead]")
+         print("Resetting to Farmstead")
          game.Players.LocalPlayer.Character.Head:Remove()
          wait(6)
          game.Players.LocalPlayer.PlayerGui.Cutscenes.MidPanel:Destroy()
@@ -124,11 +124,11 @@ local Dropdown = Tab1:CreateDropdown({
          game.Players.LocalPlayer.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
          wait(0.1)
          game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(107, 5 38)
-         print("Reset to [Farmstead] success")
+         print("Reset to Farmstead success")
       end
 
       if (Options[1] == "Sewers") then
-         print("Resetting to [Sewers]")
+         print("Resetting to Sewers")
          game.Players.LocalPlayer.Character.Head:Remove()
          wait(6)
          game.Players.LocalPlayer.PlayerGui.Cutscenes.MidPanel:Destroy()
@@ -140,11 +140,11 @@ local Dropdown = Tab1:CreateDropdown({
          game.Players.LocalPlayer.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
          wait(0.1)
          game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-260,13,102)
-         print("Reset to [Sewers] success")
+         print("Reset to Sewers success")
       end
 
       if (Options[1] == "Woods") then
-         print("Resetting to [Woods]")
+         print("Resetting to Woods")
          game.Players.LocalPlayer.Character.Head:Remove()
          wait(6)
          game.Players.LocalPlayer.PlayerGui.Cutscenes.MidPanel:Destroy()
@@ -156,7 +156,7 @@ local Dropdown = Tab1:CreateDropdown({
          game.Players.LocalPlayer.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
          wait(0.1)
          game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(610,17,49)
-         print("Reset to [Woods] success")
+         print("Reset to Woods success")
       end
 
       if (Options[1] == "Off") then
