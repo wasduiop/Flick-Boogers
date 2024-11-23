@@ -1,1 +1,179 @@
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
+local Window = Rayfield:CreateWindow({
+   Name = "Flick Boogers | Hub",
+   Icon = "align-left", -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
+   LoadingTitle = "Flick Boogers | Hub",
+   LoadingSubtitle = "by wasduiop",
+   Theme = "DarkBlue", -- Check https://docs.sirius.menu/rayfield/configuration/themes
+
+   DisableRayfieldPrompts = true,
+   DisableBuildWarnings = false, -- Prevents Rayfield from warning when the script has a version mismatch with the interface
+
+   ConfigurationSaving = {
+      Enabled = false,
+      FolderName = nil, -- Create a custom folder for your hub/game
+      FileName = "Big Hub"
+   },
+
+   Discord = {
+      Enabled = false, -- Prompt the user to join your Discord server if their executor supports it
+      Invite = "noinvitelink", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD
+      RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+   },
+
+   KeySystem = false, -- Set this to true to use our key system
+   KeySettings = {
+      Title = "Untitled",
+      Subtitle = "Key System",
+      Note = "No method of obtaining the key is provided", -- Use this to tell the user how to get a key
+      FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
+      SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
+      GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+      Key = {"Hello"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
+   }
+})
+
+local Tab1 = Window:CreateTab("Tab Example", 4483362458) -- Title, Image
+
+local Dropdown = Tab1:CreateDropdown({
+   Name = "Dropdown Example",
+   Options = {"Not Selected", "Area 8", "Farmstead", "Hospital", "House", "Sewers", "Woods"},
+   CurrentOption = {"Not Selected"},
+   MultipleOptions = false,
+   Flag = "ResetToMap", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Options)
+   
+      if (Options[1] == "Area 8") then
+         print ("Resetting to Area 8 started...")
+		 local plr = game.Players.LocalPlayer
+		 local char = plr.Character
+		 char.Head:Remove()
+		 wait(6)
+		 plr.PlayerGui.Cutscenes.MidPanel:Destroy()
+         game.Lighting.Blur:Destroy()
+		 game.Workspace.Camera:Remove()
+		 wait(0.1)
+		 game.Workspace.Camera.CameraType = Enum.CameraType.Custom
+		 game.Workspace.Camera.CameraSubject = char.HumanoidRootPart
+		 char.Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+		 wait(0.1)
+		 char.HumanoidRootPart.CFrame = CFrame.new(-443, 39, -2)
+		 print("Reset to Area 8 Success!")
+	  end
+
+      if (Options[1] == "Farmstead") then
+         print ("Resetting to Farmstead started...")
+		 local plr = game.Players.LocalPlayer
+		 local char = plr.Character
+		 char.Head:Remove()
+		 wait(6)
+		 plr.PlayerGui.Cutscenes.MidPanel:Destroy()
+         game.Lighting.Blur:Destroy()
+		 game.Workspace.Camera:Remove()
+		 wait(0.1)
+		 game.Workspace.Camera.CameraType = Enum.CameraType.Custom
+		 game.Workspace.Camera.CameraSubject = char.HumanoidRootPart
+		 char.Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+		 wait(0.1)
+		 char.HumanoidRootPart.CFrame = CFrame.new(107, 5, 38)
+		 print("Reset to Farmstead Success!")
+	  end
+
+      if (Options[1] == "Hospital") then
+         print ("Resetting to Hospital started...")
+		 local plr = game.Players.LocalPlayer
+		 local char = plr.Character
+		 char.Head:Remove()
+		 wait(6)
+		 plr.PlayerGui.Cutscenes.MidPanel:Destroy()
+         game.Lighting.Blur:Destroy()
+		 game.Workspace.Camera:Remove()
+		 wait(0.1)
+		 game.Workspace.Camera.CameraType = Enum.CameraType.Custom
+		 game.Workspace.Camera.CameraSubject = char.HumanoidRootPart
+		 char.Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+		 wait(0.1)
+		 char.HumanoidRootPart.CFrame = CFrame.new(424, 16, 20)
+		 print("Reset to Area 8 Success!")
+	  end
+
+      if (Options[1] == "House") then
+         print ("Resetting to House started...")
+		 local plr = game.Players.LocalPlayer
+		 local char = plr.Character
+		 char.Head:Remove()
+		 wait(6)
+		 plr.PlayerGui.Cutscenes.MidPanel:Destroy()
+         game.Lighting.Blur:Destroy()
+		 game.Workspace.Camera:Remove()
+		 wait(0.1)
+		 game.Workspace.Camera.CameraType = Enum.CameraType.Custom
+		 game.Workspace.Camera.CameraSubject = char.HumanoidRootPart
+		 char.Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+		 wait(0.1)
+		 char.HumanoidRootPart.CFrame = CFrame.new(-89, 5, 17)
+		 print("Reset to House Success!")
+	  end
+
+      if (Options[1] == "Sewers") then
+         print ("Resetting to Sewers started...")
+		 local plr = game.Players.LocalPlayer
+		 local char = plr.Character
+		 char.Head:Remove()
+		 wait(6)
+		 plr.PlayerGui.Cutscenes.MidPanel:Destroy()
+         game.Lighting.Blur:Destroy()
+		 game.Workspace.Camera:Remove()
+		 wait(0.1)
+		 game.Workspace.Camera.CameraType = Enum.CameraType.Custom
+		 game.Workspace.Camera.CameraSubject = char.HumanoidRootPart
+		 char.Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+		 wait(0.1)
+		 char.HumanoidRootPart.CFrame = CFrame.new(-260, 13, 102)
+		 print("Reset to Sewers Success!")
+	  end
+
+      if (Options[1] == "Woods") then
+         print ("Resetting to Woods started...")
+		 local plr = game.Players.LocalPlayer
+		 local char = plr.Character
+		 char.Head:Remove()
+		 wait(6)
+		 plr.PlayerGui.Cutscenes.MidPanel:Destroy()
+         game.Lighting.Blur:Destroy()
+		 game.Workspace.Camera:Remove()
+		 wait(0.1)
+		 game.Workspace.Camera.CameraType = Enum.CameraType.Custom
+		 game.Workspace.Camera.CameraSubject = char.HumanoidRootPart
+		 char.Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+		 wait(0.1)
+		 char.HumanoidRootPart.CFrame = CFrame.new(610, 17, 49)
+		 print("Reset to Woods Success!")
+	  end
+   end,
+})
+
+local Tab2 = Window:CreateTab("Visual", "eye") -- Title, Image
+
+local Toggle = Tab2:CreateToggle({
+   Name = "Fullbright",
+   CurrentValue = false,
+   Flag = "Fullbright", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+
+      local lights = game:GetService("Lighting")
+      if (Value) then
+		 lights.Brightness = 2
+		 lights.ClockTime = 14
+		 lights.GlobalShadows = false
+		 lights.OutdoorAmbient = Color3.fromRGB(128, 128, 128)
+		 print("Fullbright on")
+      else
+         lights.Brightness = 0
+		 lights.ClockTime = 0
+		 lights.OutdoorAmbient = Color3.fromRGB(0, 0, 0)
+		 print("Fullbright off")
+	  end
+   end,
+})
