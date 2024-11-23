@@ -149,12 +149,11 @@ local Dropdown = Tab1:CreateDropdown({
 		 char.Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
 		 wait(0.1)
 		 char.HumanoidRootPart.CFrame = CFrame.new(610, 17, 49)
+		 Dropdown:Set({"Not Selected"}) -- The new list of options
 		 print("Reset to Woods Success!")
 	  end
    end,
 })
-
-Dropdown:Set({"Not Selected"}) -- The new list of options
 
 local Tab2 = Window:CreateTab("Visual", "eye") -- Title, Image
 
