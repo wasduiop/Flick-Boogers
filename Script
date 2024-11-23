@@ -34,7 +34,7 @@ local Window = Rayfield:CreateWindow({
    }
 })
 
-local Tab1 = Window:CreateTab("Tab Example", 4483362458) -- Title, Image
+local Tab1 = Window:CreateTab("Main", 4483362458) -- Title, Image
 
 local Dropdown = Tab1:CreateDropdown({
    Name = "Dropdown Example",
@@ -153,6 +153,8 @@ local Dropdown = Tab1:CreateDropdown({
 	  end
    end,
 })
+
+Dropdown:Set({"Not Selected"}) -- The new list of options
 
 local Tab2 = Window:CreateTab("Visual", "eye") -- Title, Image
 
